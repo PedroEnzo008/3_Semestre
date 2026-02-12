@@ -3,12 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Exercicio03
+namespace Exercicio05
 {
     public class Pessoa
     {
         public string Nome = "";
         public int Idade = 0;
+
+        public Pessoa(string nome, int idade)
+        {
+            Nome = nome;
+            if (idade < 0)
+            {
+                Console.WriteLine("Idade não pode ser negativa. Idade definida como 0.");
+                Idade = 0;
+            }
+            else
+            {
+                Idade = idade;
+            }
+        }
+        public Pessoa()
+        {
+        }
 
         public void ExibirDados()
         {
@@ -27,5 +44,4 @@ namespace Exercicio03
             }
         }
     }
-
 }
